@@ -21,6 +21,7 @@ has exclude_files => (
 has ignore => (
     is => 'rw',
     #isa => 'Bool',
+    default => sub { 1 },
 );
 
 sub finalize_document {
@@ -144,7 +145,7 @@ to add some text to it.
 
 =head2 ignore
 
-Bool. If set to true, then when target headline does not exist, instead of
-dying, ignore append/prepend the headline.
+Bool. Default to true. If set to true (the default), then when target headline
+does not exist, instead of dying, ignore append/prepend the headline.
 
 =cut
